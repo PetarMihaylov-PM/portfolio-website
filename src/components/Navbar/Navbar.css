@@ -1,0 +1,116 @@
+.container {
+  width: 100vw;
+  background-color: rgb(31, 31, 31);
+  position: sticky;
+  top: 0;
+  z-index: 3;
+}
+.nav-bar {
+  background-color: rgb(31, 31, 31);
+  height: 5rem;
+  width: 100vw;
+  max-width: 75rem;
+  margin: 0 auto;
+  padding: 1rem 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.logo {
+  object-fit: cover;
+  height: 5rem;
+  width: 5rem;
+  border-radius: 5rem;
+  cursor: pointer;
+}
+
+.logo:hover{
+  box-shadow: 0 0 15px rgba(255, 255, 0, 0.982);
+}
+
+.navbar-menu-list-item {
+  letter-spacing: 0.1rem;
+  color: white;
+  margin: 1rem;
+  cursor: pointer;
+  transition: all 0.15s ease;
+  user-select: none;
+}
+
+.navbar-menu-list-item:hover {
+  color: yellow;
+  padding-bottom: 0.5rem;
+  border-bottom: solid 3px yellow;
+}
+
+.navbar-menu-btn {
+  background: white;
+  border: none;
+  border-radius: 2rem;
+  color: black;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0 1rem;
+  cursor: pointer;
+  transition: all 0.15s ease;
+}
+
+.navbar-menu-btn:hover {
+  background-color: yellow;
+  box-shadow: 0 0 15px rgba(255, 255, 0, 0.619);
+}
+
+.navbar-menu-btn .dektop-icon {
+  object-fit: cover;
+  height: 1rem;
+  width: 1rem;
+  margin: 1rem;
+}
+
+.active {
+  color: yellow;
+  padding-bottom: 0.5rem;
+  border-bottom: solid 3px yellow;
+}
+
+.mobile-menu {
+  position: absolute;
+  top: 4rem;
+  right: 2rem;
+  z-index: 2;
+  display: flex;
+  flex-direction: column;
+  padding: 0.5rem;
+  height: fit-content;
+  min-width: 15rem;
+  background: rgb(40,40,40);
+  border-radius: 1rem;
+}
+
+.mobile-menu-img {
+  display: none;
+  object-fit: cover;
+  height: 1.8rem;
+  cursor: pointer;
+}
+
+@media screen and (max-width: 720px) {
+  .mobile-menu-img{
+    display: flex;
+  }
+  .navbar-menu {
+    display: none;
+  }
+  .navbar-menu-btn {
+    display: none;
+  }
+}
+
+.list-item {
+  color: white;
+  padding: 0.5rem 3rem;
+  margin: 0.25rem;
+  background: rgb(30,30,30);
+}

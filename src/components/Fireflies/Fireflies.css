@@ -1,0 +1,46 @@
+.fireflies {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  z-index: -1;
+}
+
+.firefly {
+  position: absolute;
+  background: yellow;
+  border-radius: 50%;
+  box-shadow: 0 0 10px 4px rgba(255, 255, 0, 0.8);
+  width: 5px;
+  height: 5px;
+  animation: move linear infinite, blink 2s infinite ease-in-out;
+}
+
+@keyframes move {
+  0% {
+    transform: translate(0, 0) scale(1);
+  }
+  25% {
+    transform: translate(-20px, 30px) scale(1.2);
+  }
+  50% {
+    transform: translate(30px, -25px) scale(0.8);
+  }
+  75% {
+    transform: translate(-15px, -10px) scale(1.1);
+  }
+  100% {
+    transform: translate(0, 0) scale(1);
+  }
+}
+
+@keyframes blink {
+  0%, 100% {
+    opacity: 0.1;
+  }
+  50% {
+    opacity: 1;
+  }
+}
