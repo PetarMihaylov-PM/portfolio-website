@@ -64,11 +64,11 @@ const Navbar = () => {
         </button>
         </Link>
         
-
-        <img 
+       
+        <img
           src={menu} 
           alt="Menu" 
-          className='mobile-menu-img'
+          className='mobile-menu-img' 
           onClick={() => setShowMenu(!showMenu)}/>
         <div 
           className="mobile-menu" 
@@ -119,7 +119,7 @@ const Navbar = () => {
             to='contact-page'
             spy={true}
             smooth={true}
-            offset={-50}
+            offset={-30}
             duration={500}
             onClick={() => setShowMenu(false)}
             >Contact </Link>
