@@ -26,7 +26,7 @@ function Portfolio() {
       </div>
       <a 
         href="https://github.com/PetarMihaylov-PM/react-projects"
-        target='_blank'>
+        target='_blank' className='portolio-btn-link'>
         <button className='portfolio-btn'>See more</button>
       </a>
     </section>
