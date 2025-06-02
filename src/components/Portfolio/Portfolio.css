@@ -62,6 +62,9 @@
   margin: 3rem 0;
   padding: 0.5rem 2.5rem;
   background-color: white;
+  color: black !important;
+  text-decoration: none !important;
+  -webkit-appearance: none;
   border: none;
   border-radius: 2rem;
   font-size: 1rem;
