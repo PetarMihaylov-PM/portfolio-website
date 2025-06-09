@@ -15,7 +15,7 @@ const Contact = () => {
   const [submitMessage, setSubmitMessage] = useState('');
   const [isPhoneClicked, setIsPhoneClicked] = useState(false);
   const form = useRef();
-
+  
   function phoneClick() {
     setIsPhoneClicked(true);
     setTimeout(()=> {
@@ -26,12 +26,10 @@ const Contact = () => {
   function sendEmail(e) {
     e.preventDefault();
 
-    if(!name || !email || !message || message.length > 500) {
+    if(!name || !email || !message) {
       setError(true);
-      !message ? 
-        setSubmitMessage('Please fill all inputs') 
-        : 
-        setSubmitMessage('Message too long. Max 500 characters.');
+      
+      setSubmitMessage('Please fill all inputs'); 
 
       setTimeout(() => {
         setSubmitMessage('');
@@ -40,6 +38,18 @@ const Contact = () => {
       return;
     }
 
+    if(message.length > 500) {
+      setError(true);
+
+      setSubmitMessage('Message too long. Max 500 characters.');
+      
+      setTimeout(() => {
+        setSubmitMessage('');
+      }, 3000);
+
+      return;
+    }
+    
 
 
     emailjs.
@@ -90,7 +100,7 @@ const Contact = () => {
           name="message" 
           rows='5' 
           placeholder='Your Message'
-          className={`message ${!message && error ? 'error' : ''}`} onChange={(e) => setMessage(e.target.value)}></textarea>
+          className={`message ${!message && error || message.length > 500 && error ? 'error' : ''}`} onChange={(e) => setMessage(e.target.value)}></textarea>
           <button 
             type='submit'
             value='Send'
