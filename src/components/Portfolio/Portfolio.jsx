@@ -6,6 +6,7 @@ import portfolio3 from '../../assets/quiz.jpg';
 import portfolio4 from '../../assets/hangman.jpg';
 import portfolio5 from '../../assets/tenzies.jpg';
 import portfolio6 from '../../assets/meme.jpg';
+import portfolio7 from '../../assets/trendora2.JPG';
 
 function Portfolio() {
   return (
@@ -17,6 +18,9 @@ function Portfolio() {
         A collection of my work as a front-end developer, featuring projects that demonstrate my skills in responsive design, modern UI, and clean, efficient code.
       </span>
       <div className="portfolio-imgs-container">
+        <a href="https://trendora-e-commerce.vercel.app/" target='_blank' rel="noopener noreferrer">
+          <img src={portfolio7} alt="" className="portfolio-img wide-img" />
+        </a>
         <img src={portfolio1} alt="" className="portfolio-img wide-img" />
         <img src={portfolio4} alt="" className="portfolio-img portfolio-img2" />
         <img src={portfolio3} alt="" className="portfolio-img" />
