@@ -1,4 +1,4 @@
-import React from 'react';
+import ModalImage from "react-modal-image";
 import './Portfolio.css';
 import portfolio1 from '../../assets/cooking1.JPG';
 import portfolio2 from '../../assets/ai1.JPG';
@@ -21,12 +21,42 @@ function Portfolio() {
         <a href="https://trendora-e-commerce.vercel.app/" target='_blank' rel="noopener noreferrer">
           <img src={portfolio7} alt="" className="portfolio-img wide-img" />
         </a>
-        <img src={portfolio1} alt="" className="portfolio-img wide-img" />
-        <img src={portfolio4} alt="" className="portfolio-img portfolio-img2" />
-        <img src={portfolio3} alt="" className="portfolio-img" />
-        <img src={portfolio2} alt="" className="portfolio-img wide-img" />
-        <img src={portfolio5} alt="" className="portfolio-img" />
-        <img src={portfolio6} alt="" className="portfolio-img portfolio-img2" />
+
+        <ModalImage
+          small={portfolio1}
+          large={portfolio1}
+          className="portfolio-img wide-img"
+        />
+
+        <ModalImage
+          small={portfolio4}
+          large={portfolio4}
+          className="portfolio-img portfolio-img2"
+        />
+        
+        <ModalImage
+          small={portfolio3}
+          large={portfolio3}
+          className="portfolio-img"
+        />
+
+        <ModalImage
+          small={portfolio2}
+          large={portfolio2}
+          className="portfolio-img wide-img"
+        />
+
+        <ModalImage
+          small={portfolio5}
+          large={portfolio5}
+          className="portfolio-img"
+        />
+
+        <ModalImage
+          small={portfolio6}
+          large={portfolio6}
+          className="portfolio-img portfolio-img2"
+        />
       </div>
       <a 
         href="https://github.com/PetarMihaylov-PM/react-projects"
